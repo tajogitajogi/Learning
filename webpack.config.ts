@@ -25,7 +25,8 @@ export default (env:buildEnv)=>{
     mode: mode,
     paths,
     isDev,
-    port: PORT
+    port: PORT,
+    
   })
 
   return config;
