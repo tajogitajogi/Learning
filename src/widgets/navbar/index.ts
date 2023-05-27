@@ -1,5 +1,6 @@
 import Navbar from './ui/Navbar';
 
 export {
-  Navbar
+    // eslint-disable-next-line @typescript-eslint/indent
+    Navbar
 }
