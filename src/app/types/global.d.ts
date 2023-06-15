@@ -14,4 +14,5 @@ declare module '*.png'
 declare module '*.jpg'
 declare module '*.jpeg'
 
+// eslint-disable-next-line no-unused-vars
 declare const IS_DEV: boolean;

@@ -8,22 +8,17 @@ module.exports = {
         'plugin:react/recommended',
         'standard-with-typescript'
     ],
-    overrides: [
-        {
-            files: ['global.d.ts'],
-            rules: {
-                'no-undef': 'off'
-            }
-        }
-    ],
+
     parserOptions: {
         parser: '@typescript-eslint-parser',
         project: './tsconfig.json',
+        plugins: ['@typescript-eslint'],
         ecmaFeatures: {
             jsx: true
         },
-        ecmaVersion: 'latest',
-        sourceType: 'module'
+        ecmaVersion: '2020',
+        sourceType: 'module',
+        tsconfigRootDir: __dirname
     },
     plugins: [
         'react',
@@ -38,6 +33,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
+        'no-trailing-spaces': 'off',
         'react-require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
@@ -60,6 +56,15 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
         'n/handle-callback-err': 'off'
     },
+    overrides: [
+        {
+            files: ['global.d.ts', '**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'no-undef': 'off'
+            }
+        }
+    ],
+
     settings: {
         react: {
             version: 'detect'

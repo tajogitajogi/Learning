@@ -19,6 +19,17 @@
         "compilerOptions": {
           "module": "CommonJS"
         }
-      }
+      },
+    "include": [
+      "./config/**/*",
+      "./src/**/*.ts",
+      "./src/**/*.tsx",
+      "*",
+  
+    ],
 
-  }
+
+
+
+    
+}

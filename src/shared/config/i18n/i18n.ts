@@ -15,6 +15,7 @@ i18n
     .init({
         fallbackLng: 'ru',
 
+        // eslint-disable-next-line no-undef
         debug: IS_DEV,
 
         interpolation: {
