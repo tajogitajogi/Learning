@@ -10,16 +10,18 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
             template: paths.html
         }),
         new webpack.ProgressPlugin(),
+        
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
         new webpack.DefinePlugin({
             IS_DEV: JSON.stringify(isDev)
+            
         }),
         new webpack.HotModuleReplacementPlugin(),
         new BundleAnalyzerPlugin({
-            openAnalyzer: false
+            openAnalyzer: true
         })
     ]
 }

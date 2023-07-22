@@ -4,11 +4,7 @@ module.exports = {
         es2021: true,
         jest: true
     },
-    extends: [
-        'plugin:react/recommended',
-        'standard-with-typescript'
-    ],
-
+    extends: ['plugin:react/recommended', 'standard-with-typescript'],
     parserOptions: {
         parser: '@typescript-eslint-parser',
         project: './tsconfig.json',
@@ -20,16 +16,15 @@ module.exports = {
         sourceType: 'module',
         tsconfigRootDir: __dirname
     },
-    plugins: [
-        'react',
-        '@typescript-eslint'
-    ],
+    plugins: ['react', '@typescript-eslint'],
     rules: {
         'no-empty-pattern': 'off',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['js', 'jsx', 'ts', 'tsx'] }],
+        'react/jsx-filename-extension': [2, {
+            extensions: ['js', 'jsx', 'ts', 'tsx']
+        }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -56,19 +51,15 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
         'n/handle-callback-err': 'off'
     },
-    overrides: [
-        {
-            files: ['global.d.ts', '**/src/**/*.test.{ts,tsx}'],
-            rules: {
-                'no-undef': 'off'
-            }
+    overrides: [{
+        files: ['global.d.ts', '**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'no-undef': 'off'
         }
-    ],
-
+    }],
     settings: {
         react: {
             version: 'detect'
-
         }
     },
     globals: {
